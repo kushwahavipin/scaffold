@@ -23,8 +23,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-
   final String title;
 
   @override
@@ -42,11 +40,11 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: const Text("Scaffold"),
       ),
-      body: const Center(
-        child: Text("You have pressed the button times"),
+      body:  Center(
+        child: Text("You have pressed the button times : $_count"),
       ),
       bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         child: Container(
           height: 50.0,
         ),
@@ -56,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
           _count++;
         }),
         tooltip: 'Increment Counter',
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
 
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
